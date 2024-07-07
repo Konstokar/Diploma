@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BaseLayout from './components/layouts/BaseLayout';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <BaseLayout>
+      <header>Something future project</header>
+    </BaseLayout>
   );
-}
+};
 
 export default App;
