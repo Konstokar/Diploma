@@ -1,5 +1,5 @@
-export function StartPage() {
+export function RegisterPage() {
     return <>
-    <div>Start page</div>
+    <div>Register page</div>
     </>
 }
