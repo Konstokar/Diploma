@@ -8,9 +8,9 @@ interface BaseLayoutProps {
   
   const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => {
     return (
-      <span className={styles.main}>
+      <div className={styles.main}>
         {children}
-      </span>
+      </div>
     );
   };
   
