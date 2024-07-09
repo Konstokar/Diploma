@@ -1,7 +1,8 @@
-export interface Selection {
+export interface Selection{
+    id: number
     risk: number
     name: string
     date: string
-    period: string
+    deadline: string
     target?: string
 }
