@@ -1,9 +1,7 @@
-import React from "react";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { GridColDef } from "@mui/x-data-grid";
 import { FinanceProduct } from "../types/FinanceProduct";
 
-// Пример данных
-const rows: FinanceProduct[] = [
+export const rows: FinanceProduct[] = [
   {
     id: 1,
     name: "Prod 1",
@@ -17,8 +15,7 @@ const rows: FinanceProduct[] = [
   },
 ];
 
-// Определение столбцов
-const columns: GridColDef[] = [
+export const columns: GridColDef[] = [
   { field: "id", headerName: "id", width: 90 },
   { field: "name", headerName: "name", width: 150 },
   { field: "bank", headerName: "bank", width: 150 },
@@ -28,14 +25,3 @@ const columns: GridColDef[] = [
   { field: "removal", headerName: "removal", width: 150 },
   { field: "replanishment", headerName: "replanishment", width: 150 },
 ];
-
-// Функциональный компонент DataTable
-const DataTable: React.FC = () => {
-  return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} />
-    </div>
-  );
-};
-
-export default DataTable;

@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-//import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { StartPage } from "./pages/start-page/StartPage.tsx";
@@ -10,6 +9,7 @@ import { QuestionPageFather } from "./pages/questions-pages/QuestionPageFather.t
 import { NewSelectPage } from "./pages/new-select-page/NewSelectPage.tsx";
 import { EditProfilePage } from "./pages/edit-profile-page/EditProfilePage.tsx";
 import { AuthPage } from "./pages/auth-page/AuthPage.tsx";
+import { MainPage } from "./pages/main-page/MainPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <StartPage />,
+    element: <MainPage />,
   },
   {
     path: "/edit_profile",
@@ -51,9 +51,3 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-/*function createBrowseRouter(
-  arg0: { path: string; element: import("react/jsx-runtime").JSX.Element }[]
-) {
-  throw new Error("Function not implemented.");
-}*/
