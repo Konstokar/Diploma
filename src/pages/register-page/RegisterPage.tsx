@@ -1,4 +1,3 @@
-import { ChangeEvent } from "react";
 import InputField from "../../components/input-field";
 import BaseLayout from "../../components/layouts/BaseLayout/BaseLayout";
 import DatePicker from "../../components/date-picker";
@@ -14,6 +13,7 @@ export function RegisterPage() {
         <br />
         <br />
         <h1>Добро пожаловать!</h1>
+        <br />
         <InputField
           label={"Логин"}
           value={"Логин"}
@@ -24,11 +24,6 @@ export function RegisterPage() {
           value={"Почта"}
           onChange={() => {}}
         ></InputField>
-        <DatePicker
-          label={""}
-          selectedDate={null}
-          onChange={() => {}}
-        ></DatePicker>
         <InputField
           label={"Пароль"}
           value={"Пароль"}
@@ -44,7 +39,14 @@ export function RegisterPage() {
           value={"Номер телефона"}
           onChange={() => {}}
         ></InputField>
+        <DatePicker
+          label={"Дата рождения"}
+          selectedDate={null}
+          onChange={() => {}}
+        ></DatePicker>
+        <br />
         <BlueButton text={"Зарегистрироваться"} onClick={() => {}}></BlueButton>
+        <br />
         <p>Уже есть в системе? Войти</p>
       </BaseLayout>
     </>

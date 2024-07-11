@@ -1,5 +1,5 @@
 export interface Money{
     id: number
     name: string
-    link: string
+    link?: string
 }
