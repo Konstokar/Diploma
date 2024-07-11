@@ -1,0 +1,17 @@
+.radioButtonGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 5ex;
+    color: #4C4C4C;
+}
+
+.radioInput {
+    margin-right: 8px;
+}
