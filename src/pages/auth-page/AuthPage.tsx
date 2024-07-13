@@ -34,10 +34,14 @@ export function AuthPage() {
           onChange={() => {}}
         ></InputField>
         <br />
-        <BlueButton text={"Зарегистрироваться"} onClick={() => {}}></BlueButton>
+        <BlueButton text={"Войти"} onClick={toMain}></BlueButton>
         <br />
         <p>Вас нет в системе? Зарегистрироваться</p>
       </BaseLayout>
     </>
     </>
+}
+
+function toMain() {
+  window.location.href = '/'
 }

@@ -15,7 +15,11 @@ export function QuestionPageFather() {
    <h1>Вопрос N. Текст вопроса</h1>
    <RadioButtonGroup name={"Вопрос"} options={options} selectedValue={""} onChange={() => {}}></RadioButtonGroup>
    <br /><br /><br /><br />
-   <BlueButton text={"Далее"} onClick={() => {}}></BlueButton>
+   <BlueButton text={"Далее"} onClick={toNewSelect}></BlueButton>
    </BaseLayout>
     </>
+}
+
+function toNewSelect() {
+    window.location.href = '/new_select';
 }

@@ -15,8 +15,12 @@ export function StartPage() {
           бирже и продуктов популярных банокв России
         </p>
         <br />
-        <BlueButton text="Начать" onClick={() => {}}></BlueButton>
+        <BlueButton text="Начать" onClick={toAuth}></BlueButton>
       </BaseLayout>
     </span>
   );
+}
+
+function toAuth() {
+  window.location.href = '/auth';
 }

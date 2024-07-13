@@ -14,14 +14,14 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => {
         <ImageButton
           src={"src/assets/Profile.png"}
           alt={""}
-          onClick={() => {}}
+          onClick={toEditProfile}
         />
-        <ImageButton src={"src/assets/Home.png"} alt={""} onClick={() => {}} />
+        <ImageButton src={"src/assets/Home.png"} alt={""} onClick={toMain} />
         <span className={styles.container}>
           <ImageButton
             src={"src/assets/Logout.png"}
             alt={""}
-            onClick={() => {}}
+            onClick={exit}
           />
         </span>
       </Header>
@@ -31,3 +31,15 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => {
 };
 
 export default BaseLayout;
+
+function toEditProfile() {
+  window.location.href = "/edit_profile";
+}
+
+function toMain() {
+  window.location.href = "/";
+}
+
+function exit(){
+  window.location.href = '/start';
+}

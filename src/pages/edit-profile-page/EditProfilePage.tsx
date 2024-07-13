@@ -3,7 +3,6 @@ import RedButton from "../../components/buttons/red-button";
 import DatePicker from "../../components/date-picker";
 import InputField from "../../components/input-field";
 import BaseLayout from "../../components/layouts/BaseLayout/BaseLayout";
-import styles from "./EditProfilePage.module.scss"
 
 export function EditProfilePage() {
     return <>

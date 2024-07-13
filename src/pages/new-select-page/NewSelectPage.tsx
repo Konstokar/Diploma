@@ -28,11 +28,19 @@ export function NewSelectPage() {
     </span>
     <br /><br /><br /><br /><br />
     <div className={styles.buttons}>
-        <GreyButton text={"Начать заново"} onClick={() => {}}></GreyButton>
+        <GreyButton text={"Начать заново"} onClick={toQuestionAgain}></GreyButton>
         <div></div>
         <div></div>
-        <BlueButton text={"Завершить"} onClick={() => {}}></BlueButton>
+        <BlueButton text={"Завершить"} onClick={toMain}></BlueButton>
     </div>
     </BaseLayout>
     </>
+}
+
+function toQuestionAgain(){
+    window.location.href = '/question';
+}
+
+function toMain(){
+    window.location.href = '/';
 }

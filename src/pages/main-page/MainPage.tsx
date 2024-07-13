@@ -13,7 +13,11 @@ export function MainPage() {
     <DataTable rows={SelectionTable.rows} cols={SelectionTable.columns}>
     </DataTable>
     <br /><br /><br /><br /><br />
-    <BlueButton text={"Новая подборка"} onClick={() => {}}></BlueButton>
+    <BlueButton text={"Новая подборка"} onClick={toQuestions}></BlueButton>
     </BaseLayout>
     </>
+}
+
+function toQuestions (){
+    window.location.href = '/question';
 }
