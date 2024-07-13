@@ -13,12 +13,10 @@ export class SelectionTable {
   ];
   
   static columns: GridColDef[] = [
-    { field: "id", headerName: "id", width: 90 },
-    { field: "risk", headerName: "risk", width: 150 },
-    { field: "name", headerName: "name", width: 150 },
-    { field: "date", headerName: "date", width: 150 },
-    { field: "risk", headerName: "risk", width: 150 },
-    { field: "deadline", headerName: "periodeadlined", width: 150 },
-    { field: "target", headerName: "target", width: 150 },
+    { field: "risk", headerName: "риск", width: 150 },
+    { field: "name", headerName: "название", width: 150 },
+    { field: "date", headerName: "дата создания", width: 150 },
+    { field: "deadline", headerName: "срок достижения", width: 150 },
+    { field: "target", headerName: "финансовая цель", width: 150 },
   ];
 }

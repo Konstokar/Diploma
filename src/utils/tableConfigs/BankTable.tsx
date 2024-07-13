@@ -17,7 +17,6 @@ export class BankTable {
   ];
 
   static columns: GridColDef[] = [
-    { field: "id", headerName: "id", width: 90 },
     { field: "name", headerName: "name", width: 150 },
     { field: "bank", headerName: "bank", width: 150 },
     { field: "procentGrade", headerName: "procentGrade", width: 150 },

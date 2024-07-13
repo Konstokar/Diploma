@@ -1,8 +1,33 @@
+import { useState } from "react";
 import BlueButton from "../../components/buttons/blue-button/BlueButton";
 import InputField from "../../components/input-field/InputField";
 import BaseLayout from "../../components/layouts/BaseLayout/BaseLayout";
+import { Link } from "react-router-dom";
+
+let emailVal: string = "";
+let passwordVal: string = "";
+let phoneVal: string = "";
 
 export function AuthPage() {
+    const [email, setEmail] = useState('Почта');
+    const [password, setPassword] = useState('Пароль');
+    const [phone, setPhone] = useState('Номер телефона');
+
+    const emailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
+        emailVal = e.target.value;
+    };
+
+    const passwordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPassword(e.target.value);
+      passwordVal = e.target.value;
+    };
+
+    const phoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPhone(e.target.value);
+      phoneVal = e.target.value;
+    };
+
     return <>
     <>
       <BaseLayout>
@@ -20,28 +45,34 @@ export function AuthPage() {
         <br />
         <InputField
           label={"Почта"}
-          value={"Почта"}
-          onChange={() => {}}
+          value={email}
+          onChange={emailChange}
         ></InputField>
         <InputField
           label={"Пароль"}
-          value={"Пароль"}
-          onChange={() => {}}
+          value={password}
+          onChange={passwordChange}
         ></InputField>
         <InputField
           label={"Номер телефона"}
-          value={"Номер телефона"}
-          onChange={() => {}}
+          value={phone}
+          onChange={phoneChange}
         ></InputField>
         <br />
         <BlueButton text={"Войти"} onClick={toMain}></BlueButton>
         <br />
-        <p>Вас нет в системе? Зарегистрироваться</p>
+        <p>Вас нет в системе? <Link to="/register">Зарегистрироваться</Link>
+        </p>
       </BaseLayout>
     </>
     </>
 }
 
 function toMain() {
-  window.location.href = '/'
+  if(emailVal !== "" && passwordVal !== "" && phoneVal !== ""){
+    window.location.href = '/'
+  }
+  else{
+    alert("Пожалуйста, заполните все данные");
+  }
 }

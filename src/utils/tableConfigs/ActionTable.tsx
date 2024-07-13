@@ -12,7 +12,6 @@ export class ActionTable {
   ];
   
   static columns: GridColDef[] = [
-    { field: "id", headerName: "id", width: 90 },
     { field: "name", headerName: "name", width: 150 },
     { field: "grade", headerName: "grade", width: 150 },
     { field: "isDivids", headerName: "isDivids", width: 150 },

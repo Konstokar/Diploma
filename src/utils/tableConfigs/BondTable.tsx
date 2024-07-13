@@ -14,7 +14,6 @@ export class BondTable {
   ];
 
   static columns: GridColDef[] = [
-    { field: "id", headerName: "id", width: 90 },
     { field: "name", headerName: "name", width: 150 },
     { field: "grade", headerName: "grade", width: 150 },
     { field: "coupon", headerName: "coupon", width: 150 },

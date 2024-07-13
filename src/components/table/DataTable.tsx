@@ -1,4 +1,5 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import styles from "./DataTable.module.scss";
 
 
 interface DataTableProps {
@@ -9,8 +10,8 @@ interface DataTableProps {
 
 const DataTable: React.FC<DataTableProps> = ({rows, cols}) => {
     return (
-      <div style={{ height: 400, width: "100%" }}>
-        <DataGrid rows={rows} columns={cols} />
+      <div className={styles.table}>
+        <DataGrid rows={rows} columns={cols}/>
       </div>
     );
   };
